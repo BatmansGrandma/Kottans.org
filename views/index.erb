@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Сервис самоуничтожающихся сообщений</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="header">
+      <align=center><p><h3>Оставьте сообщение. Сообщение будет удалено по прочтению.</h3></p></align>
+    </div>
+    <form action="/create" method="POST">
+      <div class="body">
+        <textarea id="msg_input" name="msg" rows="4" placeholder="Введите ваше сообщение здесь..."></textarea>
+        <select name="destroy_option">
+          <option value="0">Уничтожить сообщение после первого прочтения</option>
+          <option value="1">Уничтожить сообщение через 1 час</option>
+  <!--    <option value="2">Уничтожить сообщение после количества прочтений</option>
+          <option value="3">Уничтожить сообщение по прошествию заданного времени</option> -->
+        </select>
+        <button id="create_message" class="button">Создать сообщение</button>
+      </div>
+    </form>
+  </body>
+</html>
